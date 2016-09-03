@@ -1,0 +1,1319 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <sim>
+	<aero>Harbin Y-12</aero>
+	<status>early-production</status>
+	<aircraft-version>0.1</aircraft-version>
+	<author>Martin Herweg and others</author>
+	<aircraft-status>
+		<fdm>early-production</fdm>
+		<exterior>early-production</exterior>
+		<cockpit>early-production</cockpit>
+		<instrumentation>early-production</instrumentation>
+		<procedures>alpha</procedures>
+		<system-modeling>beta</system-modeling>
+		<failure-modeling>beta</failure-modeling>
+		<checklist-support>alpha</checklist-support>
+		<tutorial-support>alpha</tutorial-support>
+		<documentation>alpha</documentation>
+		<usability>production</usability>  
+		<eye-candy>production</eye-candy>
+	</aircraft-status>
+	<rating>
+		<FDM type="int">4</FDM>
+		<systems type="int">1</systems>
+		<model type="int">3</model>
+		<cockpit type="int">0</cockpit>
+	</rating>
+	<type-of-aircraft>
+		<is-futuristic type="bool">false</is-futuristic>
+		<is-hovercraft type="bool">true</is-hovercraft>
+		<is-ufo type="bool">true</is-ufo>
+	</type-of-aircraft>
+
+	<flight-model>ufo</flight-model>
+
+	<startup>
+		<splash-texture>Aircraft/Y12/Y12-splash.png</splash-texture>
+	</startup>
+
+	<chase-distance-m type="double">-40.0</chase-distance-m>  
+
+	<model>
+		<cockpit-visible type="bool">true</cockpit-visible>
+		<Y12>
+			
+			<crew>
+				<cockpit-position type="int">0</cockpit-position>
+				<pilot>
+					<chair-back type="int">0</chair-back>
+					
+					<visible type="bool">false</visible>
+				</pilot>
+				<walker>
+					<visible type="bool">true</visible>
+					<x-offset-m type="double">-0.8</x-offset-m>
+					<y-offset-m type="double">1.2</y-offset-m>
+					<z-offset-m type="double">0.0</z-offset-m>
+					<head-offset-deg type="double">0.0</head-offset-deg>
+				</walker>
+			</crew>
+			
+			<doors>
+				<door>
+					<position-norm type="float">0.0</position-norm>
+					<position-adj type="float">0.0</position-adj>
+					<name type="string">cabin_door</name>
+				</door>
+				
+			</doors>
+			
+			<hover>
+				<key-up type="float">0</key-up>
+			</hover>
+	
+	<position>
+				<altitude-agl-ft type="double">0</altitude-agl-ft>
+				<crash-wow type="bool">false</crash-wow>
+				<hover-rise type="float">0</hover-rise>		<!-- yoke movement -->
+				<landing-wow type="bool">false</landing-wow>
+				<shadow-alt-agl-ft type="double">0</shadow-alt-agl-ft>
+				<skid-wow type="float">0</skid-wow>
+				<squeal-wow type="bool">false</squeal-wow>
+			</position>		
+			
+			<lighting>
+				
+				<waldo>
+					<emission>
+						<red type="float">1</red>
+						<gb type="float">1</gb>
+					</emission>
+				</waldo>
+				</lighting>
+			<systems>
+				<nacelle-L-venting type="bool">false</nacelle-L-venting>
+				<nacelle-R-venting type="bool">false</nacelle-R-venting>
+				<power-switch type="bool">true</power-switch>		<!-- default: power up at startup -->
+				<reactor-request type="bool">true</reactor-request>
+				<reactor-level type="int">1</reactor-level>
+				<wave1-request type="bool">true</wave1-request>
+				<wave1-level type="int">1</wave1-level>
+				<wave2-request type="bool">false</wave2-request>
+			</systems>
+			</Y12>
+			
+<variant type="int">0</variant>
+		
+
+		<walker n="0">
+			<animate>
+				<dialog-position type="int">0</dialog-position>
+				<enabled type="bool">false</enabled>
+				<enabled-current type="bool">false</enabled-current>
+				<sequence-selected type="int">0</sequence-selected>
+			</animate>
+			<name type="string"></name>
+			<loop-enabled type="bool">false</loop-enabled>
+			<loop-to type="int">0</loop-to>
+			<rest-sec type="double">0</rest-sec>
+			<transit-sec type="double">1.0</transit-sec>
+			<trigger-upon type="string"></trigger-upon>
+			<limb n="0">
+				<y-deg type="double">0</y-deg>
+			</limb>
+			<limb n="1">
+				<y-deg type="double">0</y-deg>
+				<z-deg type="double">0</z-deg>
+			</limb>
+			<limb n="2">
+				<y-deg type="double">0</y-deg>
+				<z-deg type="double">0</z-deg>
+			</limb>
+			<limb n="3">
+				<x-deg type="double">0</x-deg>
+				<y-deg type="double">0</y-deg>
+				<z-deg type="double">0</z-deg>
+			</limb>
+			<limb n="4">
+				<y-deg type="double">0</y-deg>
+				<z-deg type="double">0</z-deg>
+			</limb>
+			<limb n="5">
+				<x-deg type="double">0</x-deg>
+				<y-deg type="double">0</y-deg>
+			</limb>
+			<limb n="6">
+				<x-deg type="double">0</x-deg>
+				<y-deg type="double">0</y-deg>
+				<z-deg type="double">0</z-deg>
+			</limb>
+			<limb n="7">
+				<y-deg type="double">0</y-deg>
+				<z-deg type="double">0</z-deg>
+			</limb>
+			<limb n="8">
+				<x-deg type="double">0</x-deg>
+				<y-deg type="double">0</y-deg>
+			</limb>
+			<limb n="9">
+				<y-deg type="double">0</y-deg>
+			</limb>
+			<limb n="10">
+				<y-deg type="double">0</y-deg>
+			</limb>
+			<limb n="11">
+				<y-deg type="double">0</y-deg>
+			</limb>
+			<limb n="12">
+				<y-deg type="double">0</y-deg>
+			</limb>
+			<limb n="13">
+				<y-deg type="double">0</y-deg>
+			</limb>
+			<limb n="14">
+				<y-deg type="double">0</y-deg>
+			</limb>
+		</walker>
+		<walker n="1">
+			<animate>
+				<dialog-position type="int">0</dialog-position>
+				<enabled-current type="bool">false</enabled-current>
+				<enabled-triggers type="bool">true</enabled-triggers>
+				<sequence-selected type="int">0</sequence-selected>
+				<list>
+					<sequence n="0" include="Models/Animations/walker-stand_bored.xml">
+					</sequence>
+					<sequence n="1" include="Models/Animations/walker-walking.xml">
+					</sequence>
+					<sequence n="2" include="Models/Animations/walker-running.xml">
+					</sequence>
+					<sequence n="3" include="Models/Animations/walker-walk_backwards.xml">
+					</sequence>
+					<sequence n="4" include="Models/Animations/walker-falling.xml">
+					</sequence>
+					<sequence n="5" include="Models/Animations/walker-open_parachute.xml">
+					</sequence>
+					<sequence n="6" include="Models/Animations/walker-jumping_jacks.xml">
+					</sequence>
+					<sequence n="7" include="Models/Animations/walker-splat.xml">
+					</sequence>
+					<sequence n="8" include="Models/Animations/walker-stand_still.xml">
+					</sequence>
+				</list>
+				<triggers>
+					<standing type="int">-1</standing>
+					<walking type="int">-1</walking>
+					<running type="int">-1</running>
+					<backwards type="int">-1</backwards>
+					<falling type="int">-1</falling>
+					<open-parachute type="int">-1</open-parachute>
+					<landing type="int">-1</landing>
+					<crashing type="int">-1</crashing>
+				</triggers>
+			</animate>
+			<name type="string"></name>
+			<loop-enabled type="bool">false</loop-enabled>
+			<loop-to type="int">0</loop-to>
+			<rest-sec type="double">0</rest-sec>
+			<transit-sec type="double">1.0</transit-sec>
+			<trigger-upon type="string"></trigger-upon>
+			<limb n="0">
+				<y-deg type="double">0</y-deg>
+				<z-m type="double">0</z-m>
+			</limb>
+			<limb n="1">
+				<y-deg type="double">0</y-deg>
+				<z-deg type="double">0</z-deg>
+			</limb>
+			<limb n="2">
+				<y-deg type="double">0</y-deg>
+				<z-deg type="double">0</z-deg>
+			</limb>
+			<limb n="3">
+				<x-deg type="double">-80</x-deg>
+				<y-deg type="double">0</y-deg>
+				<z-deg type="double">0</z-deg>
+			</limb>
+			<limb n="4">
+				<y-deg type="double">0</y-deg>
+				<z-deg type="double">0</z-deg>
+			</limb>
+			<limb n="5">
+				<x-deg type="double">0</x-deg>
+				<y-deg type="double">0</y-deg>
+			</limb>
+			<limb n="6">
+				<x-deg type="double">-80</x-deg>
+				<y-deg type="double">0</y-deg>
+				<z-deg type="double">0</z-deg>
+			</limb>
+			<limb n="7">
+				<y-deg type="double">0</y-deg>
+				<z-deg type="double">0</z-deg>
+			</limb>
+			<limb n="8">
+				<x-deg type="double">0</x-deg>
+				<y-deg type="double">0</y-deg>
+			</limb>
+			<limb n="9">
+				<x-deg type="double">0</x-deg>
+				<y-deg type="double">0</y-deg>
+				<z-deg type="double">0</z-deg>
+			</limb>
+			<limb n="10">
+				<y-deg type="double">0</y-deg>
+			</limb>
+			<limb n="11">
+				<y-deg type="double">0</y-deg>
+			</limb>
+			<limb n="12">
+				<x-deg type="double">0</x-deg>
+				<y-deg type="double">0</y-deg>
+				<z-deg type="double">0</z-deg>
+			</limb>
+			<limb n="13">
+				<y-deg type="double">0</y-deg>
+			</limb>
+			<limb n="14">
+				<y-deg type="double">0</y-deg>
+			</limb>
+		</walker>
+	</model>
+	
+	<multiplay>
+		<generic>
+			
+			<int n="8" alias="/sim/walker/outside"/>
+			<float n="0" alias="/sim/model/Y12/doors/door[0]/position-adj"/>
+			
+			<float n="4" alias="/sim/walker/longitude-deg"/>
+			<float n="5" alias="/sim/walker/latitude-deg"/>
+			<float n="6" alias="/sim/walker/altitude-ft"/>
+			<float n="7" alias="/sim/walker/model-heading-deg"/>
+		</generic>
+	</multiplay>
+
+	<gui>
+		<dialogs>
+			<position-modified type="int">0</position-modified>
+		</dialogs>
+	</gui>
+
+	<help>
+		<title>Harbin Y12</title>
+		<key n="0">
+			<name>equal=</name>
+			<desc>open/close systems dialog</desc>
+		</key>
+		<key n="1">
+			<name>tilde~</name>
+			<desc>Shutdown/Startup Master Power</desc>
+		</key>
+		<key n="2">
+			<name>backslash</name>
+			<desc>Engage/Disengage Counter-grav</desc>
+		</key>
+		<key n="3">
+			<name>space</name>
+			<desc>Engage/Disengage Primary Engines</desc>
+		</key>
+		<key n="4">
+			<name>[ ]</name>
+			<desc>Increase/Decrease Maximum Speed</desc>
+		</key>
+		<key n="5">
+			<name>Home</name>
+			<desc>Counter-grav VTOL up</desc>
+		</key>
+		<key n="6">
+			<name>End</name>
+			<desc>Counter-grav VTOL down</desc>
+		</key>
+		<key n="7">
+			<name>b</name>
+			<desc>Reverse direction - fly backwards</desc>
+		</key>
+		<key n="8">
+			<name>f / F</name>
+			<desc>Select Next/Previous Door</desc>
+		</key>
+		<key n="9">
+			<name>Ctrl-f</name>
+			<desc>Open/Close Selected Door</desc>
+		</key>
+		<key n="10">
+			<name>g / G</name>
+			<desc>main Gear Up/Down</desc>
+		</key>
+		<key n="11">
+			<name>Ctrl-g</name>
+			<desc>Toggle Gear Deployment Mode</desc>
+		</key>
+		<key n="12">
+			<name>Ctrl-w</name>
+			<desc>Toggle Wheel Deployment Mode</desc>
+		</key>
+		<key n="13">
+			<name>c / C</name>
+			<desc>Next/Previous cabin position</desc>
+		</key>
+		<key n="14">
+			<name>Alt-c</name>
+			<desc>Jump to cockpit helm</desc>
+		</key>
+		<key n="15">
+			<name>w / s</name>
+			<desc>Walk Forward/Backward</desc>
+		</key>
+		<key n="16">
+			<name>a / d</name>
+			<desc>Walk: Slide sideways left/right</desc>
+		</key>
+		<key n="30">
+			<name>Joystick</name>
+			<desc>buttons:</desc>
+		</key>
+		<key n="31">
+			<name>flaps button</name>
+			<desc>Inc/Dec Max Speed power level</desc>
+		</key>
+		<key n="32">
+			<name>elevator trim</name>
+			<desc>Counter-grav VTOL up/down</desc>
+		</key>
+		<key n="33">
+			<name>fire trigger</name>
+			<desc>Reverse direction - fly backwards</desc>
+		</key>
+		<key n="34">
+			<name>Middle Mouse Button</name>
+			<desc>Pointer mode extras:</desc>
+		</key>
+		<key n="35">
+			<name>Drag MMB up</name>
+			<desc>Counter-grav VTOL up</desc>
+		</key>
+		<key n="36">
+			<name>Drag MMB down</name>
+			<desc>Counter-grav VTOL down</desc>
+		</key>
+		<key n="37">
+			<name>click MMB</name>
+			<desc>Center aileron and elevator</desc>
+		</key>
+	</help>
+
+	<lon-lat-format type="int">0</lon-lat-format>
+
+	<panel>
+		<visibility>false</visibility>
+	</panel>
+
+	<rendering>
+		<redout>
+			<enabled type="bool">false</enabled>
+		</redout>
+	</rendering>
+
+	<sound>
+		<path>Aircraft/Y12/Sound/Y12-sound.xml</path>
+		<chatter>
+			<enabled type="bool">false</enabled>
+		</chatter>
+	</sound>
+
+	<view n="0">
+		<internal>true</internal>
+		<config>
+			<x-offset-m>0.0</x-offset-m>
+			<y-offset-m>1.47</y-offset-m>
+			<z-offset-m>-1.35</z-offset-m>
+			<pitch-offset-deg>-2.0</pitch-offset-deg>
+			<roll-offset-deg>0</roll-offset-deg>
+			<limits>
+				<enabled type="bool">false</enabled>
+			</limits>
+		</config>
+	</view>
+
+
+	<view n="100">
+		<name>Walk View</name>
+		<type>lookfrom</type>
+		<enabled type="bool">false</enabled>
+		<config>
+			<default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+			<eye-alt-ft-path>sim/walker/altitude-ft</eye-alt-ft-path>
+			<eye-heading-deg-path>sim/walker/heading-deg</eye-heading-deg-path>
+			<eye-lat-deg-path>sim/walker/latitude-deg</eye-lat-deg-path>
+			<eye-lon-deg-path>sim/walker/longitude-deg</eye-lon-deg-path>
+			<eye-pitch-deg-path>sim/walker/pitch-deg</eye-pitch-deg-path>
+			<eye-roll-deg-path>sim/walker/roll-deg</eye-roll-deg-path>
+			<ground-level-nearplane-m type="double">0.5</ground-level-nearplane-m>
+			<x-offset-m type="double">0.0</x-offset-m>
+			<y-offset-m type="double">2.1</y-offset-m>
+			<z-offset-m type="double">9.4</z-offset-m>
+			<limits>
+				<enabled type="bool">false</enabled>
+			</limits>
+		</config>
+	</view>
+
+	<view n="101">
+		<name>Walker Orbit View</name>
+		<type>lookat</type>
+		<enabled type="bool">false</enabled>
+		<config>
+			<from-model type="bool">false</from-model>
+			<from-model-idx type="int">0</from-model-idx>
+			<at-model type="bool">false</at-model>
+			<at-model-idx type="int">100</at-model-idx>
+			<eye-alt-ft-path>sim/walker/altitude-ft</eye-alt-ft-path>
+			<eye-heading-deg-path>sim/walker/heading-deg</eye-heading-deg-path>
+			<eye-lat-deg-path>sim/walker/latitude-deg</eye-lat-deg-path>
+			<eye-lon-deg-path>sim/walker/longitude-deg</eye-lon-deg-path>
+			<eye-pitch-deg-path>sim/walker/pitch-deg</eye-pitch-deg-path>
+			<eye-roll-deg-path>sim/walker/roll-deg</eye-roll-deg-path>
+			<target-alt-ft-path>sim/walker/altitude-ft</target-alt-ft-path>
+			<target-heading-deg-path>sim/walker/heading-deg</target-heading-deg-path>
+			<target-lat-deg-path>sim/walker/latitude-deg</target-lat-deg-path>
+			<target-lon-deg-path>sim/walker/longitude-deg</target-lon-deg-path>
+			<target-pitch-deg-path>sim/walker/pitch-deg</target-pitch-deg-path>
+			<target-roll-deg-path>sim/walker/roll-deg</target-roll-deg-path>
+			<target-x-offset-m type="double">0</target-x-offset-m>
+			<target-y-offset-m type="double">1.5</target-y-offset-m>
+			<target-z-offset-m type="double">0</target-z-offset-m>
+			<ground-level-nearplane-m type="double">0.2f</ground-level-nearplane-m>
+			<default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+			<x-offset-m type="double">0</x-offset-m>
+			<y-offset-m type="double">1</y-offset-m>
+			<z-offset-m type="double">5</z-offset-m>
+			<heading-offset-deg>0</heading-offset-deg>
+			<pitch-offset-deg>0</pitch-offset-deg>
+			<roll-offset-deg>0</roll-offset-deg>
+			<limits>
+				<enabled type="bool">false</enabled>
+			</limits>
+		</config>
+	</view>
+ <view n="102">
+    <name>Cabin View</name>
+    <internal archive="y">true</internal>
+    <type>lookfrom</type>
+    <config>
+      <from-model type="bool">true</from-model>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <x-offset-m archive="y">  0.195 </x-offset-m>	<!-- Right -->
+      <y-offset-m archive="y">  1.355 </y-offset-m>	<!-- Up    -->
+      <z-offset-m archive="y"> -1.289 </z-offset-m>	<!-- Back  -->
+      <pitch-offset-deg>-15</pitch-offset-deg>
+      <default-field-of-view-deg>60</default-field-of-view-deg>
+      <dynamic-view type="bool">true</dynamic-view>
+    </config>
+  </view>
+
+	<walker>
+		<outside type="bool">false</outside>
+		<walking type="int">0</walking>
+		<walking-momentum type="bool">false</walking-momentum>
+		<speed-mps type="float">0.9</speed-mps>
+		<latitude-deg type="double">0.0</latitude-deg>
+		<longitude-deg type="double">0.0</longitude-deg>
+		<altitude-ft type="double">0.0</altitude-ft>
+		<heading-deg type="double">0.0</heading-deg>
+		<pitch-deg type="double">0.0</pitch-deg>
+		<roll-deg type="double">0.0</roll-deg>
+		<time-of-exit-sec type="double">0.0</time-of-exit-sec>
+		<altitude-at-exit-ft type="double">0.0</altitude-at-exit-ft>
+		<starting-lat type="double">0.0</starting-lat>
+		<starting-lon type="double">0.0</starting-lon>
+		<starting-trajectory-lat type="double">0.0</starting-trajectory-lat>
+		<starting-trajectory-lon type="double">0.0</starting-trajectory-lon>
+		<starting-trajectory-z-mps type="double">0.0</starting-trajectory-z-mps>
+		<time-to-zero-z-sec type="double">0.0</time-to-zero-z-sec>
+		<airborne type="bool">false</airborne>
+		<parachute-opened-altitude-ft type="double">0.0</parachute-opened-altitude-ft>
+		<parachute-opened-sec type="double">0.0</parachute-opened-sec>
+		<parachute-equipped type="bool">false</parachute-equipped>
+		<crashed type="bool">false</crashed>
+		<key-triggers>
+			<outside-toggle type="bool">false</outside-toggle>
+			<forward type="int">0</forward>
+			<slide type="int">0</slide>
+			<speed type="float">0</speed>
+		</key-triggers>
+	</walker>
+
+	<atc>
+		<enabled type="bool">false</enabled>
+	</atc>
+ </sim>
+
+ <ai>
+	<submodels>
+		<engine-L-flaring type="bool">false</engine-L-flaring>
+		<engine-R-flaring type="bool">false</engine-R-flaring>
+		<engine-L-venting type="bool">false</engine-L-venting>
+		<engine-R-venting type="bool">false</engine-R-venting>
+		<nacelle-LF-venting type="bool">false</nacelle-LF-venting>
+		<nacelle-LR-venting type="bool">false</nacelle-LR-venting>
+		<nacelle-RF-venting type="bool">false</nacelle-RF-venting>
+		<nacelle-RR-venting type="bool">false</nacelle-RR-venting>
+	</submodels>
+ </ai>
+
+ <controls>
+	<engines>
+		<countergrav-factor type="int">6</countergrav-factor>
+	</engines>
+	<lighting>
+		<alert type="bool">false</alert>
+		<beacon type="bool">true</beacon>
+		<nav-lights type="bool">true</nav-lights>
+		<strobe type="bool">true</strobe>
+	</lighting>
+	<gear>
+		<height-switch type="bool">false</height-switch>
+		<wheels-switch type="bool">true</wheels-switch>
+	</gear>
+ </controls>
+
+ <engines>
+	<engine>
+		<speed-max-mps type="double">0</speed-max-mps>
+		<speed-max-powerlevel type="double">0</speed-max-powerlevel>
+	</engine>
+ </engines>
+
+ <gear>
+	<gear n="0">
+		<position-norm type="float">1</position-norm>
+		<position-side-pads type="float">1</position-side-pads>
+		<last-request type="int">1</last-request>
+		<!-- hint for the route manager -->
+		<wow type="bool">false</wow>
+	</gear>
+	<gear n="1">
+		<position-norm type="float">1</position-norm>
+	</gear>
+	<gear-agl-ft type="float">3.640164</gear-agl-ft>
+ </gear>
+
+ <input>
+	<keyboard>
+		<key n="16">
+			<name>ctrl-p</name>
+			<desc>Toggle walker paused</desc>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>sim/walker/pause-walker</property>
+			</binding>
+		</key>
+		<key n="61">
+			<name>Equal=</name>
+			<desc>Show dialog</desc>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>Y12.showDialog()</script>
+			</binding>
+		</key>
+		<key n="126">
+			<name>Tilde~</name>
+			<desc>Startup/Shutdown Master Power</desc>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>Y12.toggle_power(1)</script>
+			</binding>
+		</key>
+		<key n="32">
+			<name>space</name>
+			<desc>Engage/Disengage Primary engines</desc>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>Y12.toggle_wave1()</script>
+			</binding>
+		</key>
+		<key n="92">
+			<name>\</name>
+			<desc>Engage/Disengage CounterGrav and Fusion reactor</desc>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>Y12.toggle_fusion()</script>
+			</binding>
+		</key>
+		<key n="311">
+			<name>KP7</name>
+			<desc>Hover Up</desc>
+			<repeatable>false</repeatable>
+			<binding> 
+				<command>property-assign</command>
+				<property>sim/model/Y12/hover/key-up</property>
+				<value>1</value>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-assign</command>
+					<property>sim/model/Y12/hover/key-up</property>
+					<value>0</value>
+				</binding>
+			</mod-up>
+		</key>
+		<key n="305">
+			<name>KP1</name>
+			<desc>Hover Down</desc>
+			<repeatable>false</repeatable>
+			<binding> 
+				<command>property-assign</command>
+				<property>sim/model/Y12/hover/key-up</property>
+				<value>-1</value>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-assign</command>
+					<property>sim/model/Y12/hover/key-up</property>
+					<value>0</value>
+				</binding>
+			</mod-up>
+		</key>
+		<key n="362">
+			<name>Home</name>
+			<desc>Hover Up</desc>
+			<repeatable>false</repeatable>
+			<binding> 
+				<command>property-assign</command>
+				<property>sim/model/Y12/hover/key-up</property>
+				<value>1</value>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-assign</command>
+					<property>sim/model/Y12/hover/key-up</property>
+					<value>0</value>
+				</binding>
+			</mod-up>
+		</key>
+		<key n="363">
+			<name>End</name>
+			<desc>Hover Down</desc>
+			<repeatable>false</repeatable>
+			<binding> 
+				<command>property-assign</command>
+				<property>sim/model/Y12/hover/key-up</property>
+				<value>-1</value>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-assign</command>
+					<property>sim/model/Y12/hover/key-up</property>
+					<value>0</value>
+				</binding>
+			</mod-up>
+		</key>
+		<key n="6">
+			<name>Ctrl-F</name>
+			<desc>Open/Close selected door</desc>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>Y12.toggle_door()</script>
+			</binding>
+		</key>
+		<key n="102">
+			<name>f</name>
+			<desc>Select next door</desc>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>Y12.next_door()</script>
+			</binding>
+		</key>
+		<key n="70">
+			<name>F</name>
+			<desc>Select previous door</desc>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>Y12.previous_door()</script>
+			</binding>
+		</key>
+		<key n="7">
+			<name>Ctrl-G</name>
+			<desc>Toggle gear deployment mode</desc>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>Y12.toggle_gear_mode(-1)</script>
+			</binding>
+		</key>
+		<key n="23">
+			<name>Ctrl-W</name>
+			<desc>Toggle wheel deployment mode</desc>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/gear/wheels-switch</property>
+				<step>1</step>
+				<min>0</min>
+				<max>2</max>
+				<wrap>true</wrap>
+			</binding>
+		</key>
+		<key n="99">
+			<name>c</name>
+			<desc>Cycle Cockpit location - Stand up, walk around, sit down</desc>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>Y12.cycle_cockpit(1)</script>
+			</binding>
+		</key>
+		<key n="67">
+			<name>C</name>
+			<desc>Cycle Cockpit location - previous</desc>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>Y12.cycle_cockpit(-1)</script>
+			</binding>
+		</key>
+		<key n="99">
+			<name>Alt-c</name>
+			<desc>Jump to cockpit helm</desc>
+			<repeatable>false</repeatable>
+			<mod-alt>
+				<binding>
+					<command>nasal</command>
+					<script>Y12.cycle_cockpit(10)</script>
+				</binding>
+			</mod-alt>
+		</key>
+		<key n="119"> 
+			<name>w</name>
+			<desc>Walk forward</desc>
+			<repeatable>false</repeatable>
+			<binding n="0">
+				<command>property-assign</command>
+				<property>sim/walker/key-triggers/forward</property>
+				<value>1</value>
+			</binding>
+			<binding n="1">
+				<command>property-assign</command>
+				<property>sim/walker/key-triggers/speed</property>
+				<property>sim/walker/speed-mps</property>
+			</binding>
+			<mod-up>
+				<binding n="0">
+					<command>property-assign</command>
+					<property>sim/walker/key-triggers/forward</property>
+					<value>0</value>
+				</binding>
+				<binding n="1">
+					<command>property-assign</command>
+					<property>sim/walker/key-triggers/speed</property>
+					<property>sim/walker/speed-mps</property>
+				</binding>
+			</mod-up>
+		</key>
+		<key n="87"> 
+			<name>W</name>
+			<desc>Run forward</desc>
+			<repeatable>false</repeatable>
+			<binding n="0">
+				<command>property-assign</command>
+				<property>sim/walker/key-triggers/forward</property>
+				<value>1</value>
+			</binding>
+			<binding n="1">
+				<command>property-assign</command>
+				<property>sim/walker/key-triggers/speed</property>
+				<property>sim/walker/speed-mps</property>
+			</binding>
+			<binding n="2">
+				<command>property-multiply</command>
+				<property>sim/walker/key-triggers/speed</property>
+				<factor>5.0</factor>
+			</binding>
+			<mod-up>
+				<binding n="0">
+					<command>property-assign</command>
+					<property>sim/walker/key-triggers/forward</property>
+					<value>0</value>
+				</binding>
+				<binding n="1">
+					<command>property-assign</command>
+					<property>sim/walker/key-triggers/speed</property>
+					<property>sim/walker/speed-mps</property>
+				</binding>
+			</mod-up>
+		</key>
+		<key n="115"> 
+			<name>s</name>
+			<desc>Walk backward</desc>
+			<repeatable>false</repeatable>
+			<binding n="0">
+				<command>property-assign</command>
+				<property>sim/walker/key-triggers/forward</property>
+				<value>-1</value>
+			</binding>
+			<binding n="1">
+				<command>property-assign</command>
+				<property>sim/walker/key-triggers/speed</property>
+				<property>sim/walker/speed-mps</property>
+			</binding>
+			<mod-up>
+				<binding n="0">
+					<command>property-assign</command>
+					<property>sim/walker/key-triggers/forward</property>
+					<value>0</value>
+				</binding>
+				<binding n="1">
+					<command>property-assign</command>
+					<property>sim/walker/key-triggers/speed</property>
+					<property>sim/walker/speed-mps</property>
+				</binding>
+			</mod-up>
+		</key>
+		<key n="83"> 
+			<name>S</name>
+			<desc>Walk/run backward</desc>
+			<repeatable>false</repeatable>
+			<binding n="0">
+				<command>property-assign</command>
+				<property>sim/walker/key-triggers/forward</property>
+				<value>-1</value>
+			</binding>
+			<binding n="1">
+				<command>property-assign</command>
+				<property>sim/walker/key-triggers/speed</property>
+				<property>sim/walker/speed-mps</property>
+			</binding>
+			<binding n="2">
+				<command>property-multiply</command>
+				<property>sim/walker/key-triggers/speed</property>
+				<factor>2.5</factor>
+			</binding>
+			<mod-up>
+				<binding n="0">
+					<command>property-assign</command>
+					<property>sim/walker/key-triggers/forward</property>
+					<value>0</value>
+				</binding>
+				<binding n="1">
+					<command>property-assign</command>
+					<property>sim/walker/key-triggers/speed</property>
+					<property>sim/walker/speed-mps</property>
+				</binding>
+			</mod-up>
+		</key>
+		<key n="97"> 
+			<name>a</name>
+			<desc>Slide left</desc>
+			<repeatable>false</repeatable>
+			<binding n="0">
+				<command>property-assign</command>
+				<property>sim/walker/key-triggers/slide</property>
+				<value>-1</value>
+			</binding>
+			<binding n="1">
+				<command>property-assign</command>
+				<property>sim/walker/key-triggers/speed</property>
+				<property>sim/walker/speed-mps</property>
+			</binding>
+			<mod-up>
+				<binding n="0">
+					<command>property-assign</command>
+					<property>sim/walker/key-triggers/slide</property>
+					<value>0</value>
+				</binding>
+				<binding n="1">
+					<command>property-assign</command>
+					<property>sim/walker/key-triggers/speed</property>
+					<property>sim/walker/speed-mps</property>
+				</binding>
+			</mod-up>
+		</key>
+		<key n="65"> 
+			<name>A</name>
+			<desc>Slide left2, override default assignment</desc>
+			<repeatable>false</repeatable>
+			<binding n="0">
+				<command>property-assign</command>
+				<property>sim/walker/key-triggers/slide</property>
+				<value>-1</value>
+			</binding>
+			<binding n="1">
+				<command>property-assign</command>
+				<property>sim/walker/key-triggers/speed</property>
+				<property>sim/walker/speed-mps</property>
+			</binding>
+			<binding n="2">
+				<command>property-multiply</command>
+				<property>sim/walker/key-triggers/speed</property>
+				<factor>2.5</factor>
+			</binding>
+			<mod-up>
+				<binding n="0">
+					<command>property-assign</command>
+					<property>sim/walker/key-triggers/slide</property>
+					<value>0</value>
+				</binding>
+				<binding n="1">
+					<command>property-assign</command>
+					<property>sim/walker/key-triggers/speed</property>
+					<property>sim/walker/speed-mps</property>
+				</binding>
+			</mod-up>
+		</key>
+		<key n="100"> 
+			<name>d</name>
+			<desc>Slide right</desc>
+			<repeatable>false</repeatable>
+			<binding n="0">
+				<command>property-assign</command>
+				<property>sim/walker/key-triggers/slide</property>
+				<value>1</value>
+			</binding>
+			<binding n="1">
+				<command>property-assign</command>
+				<property>sim/walker/key-triggers/speed</property>
+				<property>sim/walker/speed-mps</property>
+			</binding>
+			<mod-up>
+				<binding n="0">
+					<command>property-assign</command>
+					<property>sim/walker/key-triggers/slide</property>
+					<value>0</value>
+				</binding>
+				<binding n="1">
+					<command>property-assign</command>
+					<property>sim/walker/key-triggers/speed</property>
+					<property>sim/walker/speed-mps</property>
+				</binding>
+			</mod-up>
+		</key>
+		<key n="68"> 
+			<name>D</name>
+			<desc>Slide right2</desc>
+			<repeatable>false</repeatable>
+			<binding n="0">
+				<command>property-assign</command>
+				<property>sim/walker/key-triggers/slide</property>
+				<value>1</value>
+			</binding>
+			<binding n="1">
+				<command>property-assign</command>
+				<property>sim/walker/key-triggers/speed</property>
+				<property>sim/walker/speed-mps</property>
+			</binding>
+			<binding n="2">
+				<command>property-multiply</command>
+				<property>sim/walker/key-triggers/speed</property>
+				<factor>2.5</factor>
+			</binding>
+			<mod-up>
+				<binding n="0">
+					<command>property-assign</command>
+					<property>sim/walker/key-triggers/slide</property>
+					<value>0</value>
+				</binding>
+				<binding n="1">
+					<command>property-assign</command>
+					<property>sim/walker/key-triggers/speed</property>
+					<property>sim/walker/speed-mps</property>
+				</binding>
+			</mod-up>
+		</key>
+
+		<!-- rewrite autopilot lock because dg-heading doesn't work with this model -->
+		<key n="8">
+			<name>Ctrl-H</name>
+			<desc>Toggle autopilot heading lock</desc>
+			<binding>
+				<command>nasal</command>
+				<script>
+					var node = props.globals.getNode("/autopilot/locks/heading", 1);
+					if ( node.getValue() == "true-heading-hold" ) {
+						node.setValue( "" );
+					} else {
+						node.setValue( "true-heading-hold" );
+					}
+				</script>
+			</binding>
+		</key>
+	</keyboard>
+ </input>
+
+ <instrumentation>
+	<adf>
+		<frequencies>
+			<selected-khz type="int">0</selected-khz>
+			<standby-khz type="int">0</standby-khz>
+		</frequencies>
+	</adf>
+	<attitude-indicator>
+		<config>
+			<tumble-flag type="bool">true</tumble-flag>
+		</config>
+	</attitude-indicator>
+	<digital>
+		<altitude-mode type="int">0</altitude-mode>
+		<heading-mode type="int">0</heading-mode>
+		<pitch-neg type="int">0</pitch-neg>
+		<velocity-mode type="int">1</velocity-mode>
+	</digital>
+	<nav n="0">
+		<frequencies>
+			<selected-mhz type="double">0</selected-mhz>
+			<selected-mhz-fmt type="string">0.00</selected-mhz-fmt>
+			<standby-mhz type="double">0</standby-mhz>
+			<standby-mhz-fmt type="string">0.00</standby-mhz-fmt>
+		</frequencies>
+	</nav>
+	<nav n="1">
+		<frequencies>
+			<selected-mhz type="double">0</selected-mhz>
+			<selected-mhz-fmt type="string">0.00</selected-mhz-fmt>
+			<standby-mhz type="double">0</standby-mhz>
+			<standby-mhz-fmt type="string">0.00</standby-mhz-fmt>
+		</frequencies>
+	</nav>
+	<display-screens>
+		<t1L-3 type="string">POWERING UP</t1L-3>
+		<t1L-8 type="string">1458 KNOTS</t1L-8>
+		<t1L-9 type="string">STANDARD</t1L-9>
+		<t1L-10 type="int">0</t1L-10>
+		<t1L-20 type="string"> </t1L-20>
+		<t1L-21 type="string"> </t1L-21>
+		<t1L-22 type="string"> </t1L-22>
+		<t1L-23 type="string"> </t1L-23>
+		<t1L-24 type="string"> </t1L-24>
+		<t2L-1 type="string">Nearby aircraft</t2L-1>
+		<t2L-2 type="string"> </t2L-2>
+		<t2L-3a type="string"> </t2L-3a>
+		<t2L-3b type="string"> </t2L-3b>
+		<t2L-3c type="string"> </t2L-3c>
+		<t2L-4a type="string"> </t2L-4a>
+		<t2L-4b type="string"> </t2L-4b>
+		<t2L-4c type="string"> </t2L-4c>
+		<t2L-5a type="string"> </t2L-5a>
+		<t2L-5b type="string"> </t2L-5b>
+		<t2L-5c type="string"> </t2L-5c>
+		<t2L-6a type="string"> </t2L-6a>
+		<t2L-6b type="string"> </t2L-6b>
+		<t2L-6c type="string"> </t2L-6c>
+		<t2L-7a type="string"> </t2L-7a>
+		<t2L-7b type="string"> </t2L-7b>
+		<t2L-7c type="string"> </t2L-7c>
+		<t2L-8a type="string"> </t2L-8a>
+		<t2L-8b type="string"> </t2L-8b>
+		<t2L-8c type="string"> </t2L-8c>
+		<t2L-9a type="string"> </t2L-9a>
+		<t2L-9b type="string"> </t2L-9b>
+		<t2L-9c type="string"> </t2L-9c>
+		<t2L-10a type="string"> </t2L-10a>
+		<t2L-10b type="string"> </t2L-10b>
+		<t2L-10c type="string"> </t2L-10c>
+		<t2L-11a type="string"> </t2L-11a>
+		<t2L-11b type="string"> </t2L-11b>
+		<t2L-11c type="string"> </t2L-11c>
+		<t2L-12a type="string"> </t2L-12a>
+		<t2L-12b type="string"> </t2L-12b>
+		<t2L-12c type="string"> </t2L-12c>
+		<t2L-13a type="string"> </t2L-13a>
+		<t2L-13b type="string"> </t2L-13b>
+		<t2L-13c type="string"> </t2L-13c>
+		<t2L-14a type="string"> </t2L-14a>
+		<t2L-14b type="string"> </t2L-14b>
+		<t2L-14c type="string"> </t2L-14c>
+		<t2L-15a type="string"> </t2L-15a>
+		<t2L-15b type="string"> </t2L-15b>
+		<t2L-15c type="string"> </t2L-15c>
+		<t2L-16a type="string"> </t2L-16a>
+		<t2L-16b type="string"> </t2L-16b>
+		<t2L-16c type="string"> </t2L-16c>
+		<enabled-2L type="bool">false</enabled-2L>
+		<refresh-2L-sec type="float">1.0</refresh-2L-sec>
+		<t2R-1 type="string"> </t2R-1>
+		<t2R-2 type="string"> </t2R-2>
+		<t2R-3 type="string"> </t2R-3>
+		<t2R-4 type="string"> </t2R-4>
+		<t2R-5 type="string"> </t2R-5>
+		<t2R-6 type="string"> </t2R-6>
+		<t2R-7 type="string"> </t2R-7>
+		<t2R-8 type="string"> </t2R-8>
+		<t2R-9 type="string"> </t2R-9>
+		<t2R-10 type="string"> </t2R-10>
+		<t2R-11 type="string"> </t2R-11>
+		<t2R-12 type="string"> </t2R-12>
+		<t2R-13 type="string"> </t2R-13>
+		<t2R-14 type="string"> </t2R-14>
+		<t2R-15 type="string"> </t2R-15>
+		<t2R-16 type="string"> </t2R-16>
+		<t2R-17 type="string"> </t2R-17>
+		<t2R-18 type="string"> </t2R-18>
+		<t2R-19 type="string"> </t2R-19>
+		<t2R-20 type="string"> </t2R-20>
+		<enabled-2R type="bool">false</enabled-2R>
+		<t3L-1 type="string"> </t3L-1>
+		<t3L-2 type="string"> </t3L-2>
+		<t3L-3 type="string"> </t3L-3>
+		<t3L-4 type="string"> </t3L-4>
+		<t3L-5 type="string"> </t3L-5>
+		<t3L-6 type="string"> </t3L-6>
+		<t3L-7 type="string"> </t3L-7>
+		<t3L-8 type="string"> </t3L-8>
+		<t3L-9 type="string"> </t3L-9>
+		<t3L-10 type="string"> </t3L-10>
+		<t3L-11 type="string"> </t3L-11>
+		<t3L-12 type="string"> </t3L-12>
+		<t3L-13 type="string"> </t3L-13>
+		<t3L-14 type="string"> </t3L-14>
+		<t3L-15 type="string"> </t3L-15>
+		<t3L-16 type="string"> </t3L-16>
+		<enabled-3L type="bool">false</enabled-3L>
+		<t3R-1 type="string"> </t3R-1>
+		<t3R-2 type="string"> </t3R-2>
+		<t3R-3 type="string"> </t3R-3>
+		<t3R-4 type="string"> </t3R-4>
+		<t3R-5 type="string"> </t3R-5>
+		<t3R-6 type="string"> </t3R-6>
+		<t3R-7 type="string"> </t3R-7>
+		<t3R-8 type="string"> </t3R-8>
+		<t3R-9 type="string"> </t3R-9>
+		<t3R-10 type="string"> </t3R-10>
+		<t3R-11 type="string"> </t3R-11>
+		<t3R-12 type="string"> </t3R-12>
+		<t3R-13 type="string"> </t3R-13>
+		<t3R-14 type="string"> </t3R-14>
+		<t3R-15 type="string"> </t3R-15>
+		<t3R-16 type="string"> </t3R-16>
+		<enabled-3R type="bool">false</enabled-3R>
+		<enabled-4L type="bool">true</enabled-4L>
+		<t4R-1 type="string"> </t4R-1>
+		<t4R-2 type="string"> </t4R-2>
+		<t4R-3 type="string"> </t4R-3>
+		<t4R-4 type="string"> </t4R-4>
+		<t4R-5 type="string"> </t4R-5>
+		<t4R-6 type="string"> </t4R-6>
+		<t4R-7 type="string"> </t4R-7>
+		<t4R-8 type="string"> </t4R-8>
+		<t4R-9 type="string"> </t4R-9>
+		<t4R-10 type="string"> </t4R-10>
+		<t4R-11 type="string"> </t4R-11>
+		<t4R-12 type="string"> </t4R-12>
+		<t4R-13 type="string"> </t4R-13>
+		<t4R-14 type="string"> </t4R-14>
+		<t4R-15 type="string"> </t4R-15>
+		<t4R-16 type="string"> </t4R-16>
+		<t4R-17 type="string"> </t4R-17>
+		<t4R-18 type="string"> </t4R-18>
+		<t4R-19 type="string"> </t4R-19>
+		<t4R-20 type="string"> </t4R-20>
+		<t4R-21 type="string"> </t4R-21>
+		<t4R-22 type="string"> </t4R-22>
+		<t4R-23 type="string"> </t4R-23>
+		<t4R-24 type="string"> </t4R-24>
+		<enabled-4R type="bool">false</enabled-4R>
+		<t5R-1 type="string"> </t5R-1>
+		<t5R-2 type="string"> </t5R-2>
+		<t5R-3 type="string"> </t5R-3>
+		<t5R-4 type="string"> </t5R-4>
+		<t5R-5 type="string"> </t5R-5>
+		<t5R-6 type="string"> </t5R-6>
+		<t5R-7 type="string"> </t5R-7>
+		<t5R-8 type="string"> </t5R-8>
+		<t5R-9 type="string"> </t5R-9>
+		<t5R-10 type="string"> </t5R-10>
+		<t5R-11 type="string"> </t5R-11>
+		<t5R-12 type="string"> </t5R-12>
+		<t5R-13 type="string"> </t5R-13>
+		<t5R-14 type="string"> </t5R-14>
+		<t5R-15 type="string"> </t5R-15>
+		<t5R-16 type="string"> </t5R-16>
+		<t5R-17 type="string"> </t5R-17>
+		<t5R-18 type="string"> </t5R-18>
+		<t5R-19 type="string"> </t5R-19>
+		<t5R-20 type="string"> </t5R-20>
+		<t5R-21 type="string"> </t5R-21>
+		<t5R-22 type="string"> </t5R-22>
+		<t5R-23 type="string"> </t5R-23>
+		<t5R-24 type="string"> </t5R-24>
+		<enabled-5R type="bool">false</enabled-5R>
+	</display-screens>
+	<ai-vor>
+		<callsign type="string"> </callsign>
+		<distance-m type="float">0.0</distance-m>
+		<elevation-deg type="float">0.0</elevation-deg>
+		<heading-deg type="float">0.0</heading-deg>
+		<mode type="int">0</mode>
+	</ai-vor>
+	<gees>
+		<gees-deg type="float">36.0</gees-deg>
+		<gees-float type="float">1.0</gees-float>
+		<gees-string type="string"> </gees-string>
+		<mode type="int">1</mode>
+		<peak-refresh-sec type="float">1.0</peak-refresh-sec>
+		<vsi-float type="float">1.0</vsi-float>
+	</gees>
+	<tracking>
+		<enabled type="bool">false</enabled>
+		<ai-size type="int">0</ai-size>
+		<ai1-bearing-deg type="float">-1.0</ai1-bearing-deg>
+		<ai1-callsign type="string"> </ai1-callsign>
+		<ai1-distance-m type="float">-999999</ai1-distance-m>
+		<ai1-elevation-deg type="float">-99.0</ai1-elevation-deg>
+		<ai1-heading-offset-deg type="float">-99.0</ai1-heading-offset-deg>
+		<ai1-to-factor type="float">1</ai1-to-factor>
+		<ap1-bearing-deg type="float">0.0</ap1-bearing-deg>
+		<ap1-callsign type="string"> </ap1-callsign>
+		<ap1-distance-m type="float">0.0</ap1-distance-m>
+		<ap1-elevation-deg type="float">0.0</ap1-elevation-deg>
+		<ap1-heading-deg type="float">-99.0</ap1-heading-deg>
+		<ap1-heading-offset-deg type="float">-99.0</ap1-heading-offset-deg>
+		<ap1-name type="string">NOT AVAILABLE IN FlightGear 0.9.10 </ap1-name>
+		<ap1-lat type="double">0</ap1-lat>
+		<ap1-lon type="double">0</ap1-lon>
+		<ap1-range type="string"> </ap1-range>
+		<ap1-to-factor type="float">1</ap1-to-factor>
+		<ap2-bearing-deg type="float">0.0</ap2-bearing-deg>
+		<ap2-callsign type="string"> </ap2-callsign>
+		<ap2-distance-m type="float">0.0</ap2-distance-m>
+		<ap2-elevation-deg type="float">-99.0</ap2-elevation-deg>
+		<ap2-heading-deg type="float">-99.0</ap2-heading-deg>
+		<ap2-heading-offset-deg type="float">-99.0</ap2-heading-offset-deg>
+		<ap2-name type="string">NOT AVAILABLE </ap2-name>
+		<ap2-lat type="double">0</ap2-lat>
+		<ap2-lon type="double">0</ap2-lon>
+		<ap2-range type="string"> </ap2-range>
+		<ap2-to-factor type="float">1</ap2-to-factor>
+		<mp-size type="int">0</mp-size>
+		<mp1-bearing-deg type="float">-1.0</mp1-bearing-deg>
+		<mp1-callsign type="string"> </mp1-callsign>
+		<mp1-distance-m type="float">-999999</mp1-distance-m>
+		<mp1-elevation-deg type="float">-99.0</mp1-elevation-deg>
+		<mp1-heading-offset-deg type="float">-99.0</mp1-heading-offset-deg>
+		<mp1-to-factor type="float">1</mp1-to-factor>
+	</tracking>
+ </instrumentation>
+
+ <logging>
+	<walker-position type="bool">false</walker-position>
+	<walker-debug type="bool">false</walker-debug>
+ </logging>
+
+ <orientation>
+	<ground-pitch type="double">0</ground-pitch>
+	<ground-roll type="double">0</ground-roll>
+	<groundslope-factored-pitch type="double">0</groundslope-factored-pitch>
+	<groundslope-factored-roll type="double">0</groundslope-factored-roll>
+	<groundsloped-pitch-deg type="double">0</groundsloped-pitch-deg>
+	<groundsloped-roll-deg type="double">0</groundsloped-roll-deg>
+ </orientation>
+</PropertyList>

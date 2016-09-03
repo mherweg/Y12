@@ -1,0 +1,64 @@
+<!--== Y12 ==-->
+
+<PropertyList>
+
+<!--== mesh series 10 == 23635 vertices == 17794 faces ==-->
+	<path>Y12.ac</path>
+	<texture-path>Textures</texture-path>
+	
+ 
+  
+	<animation>
+		<type>spin</type>
+		<object-name>left_prop</object-name>
+		
+		<property>controls/engines/engine/throttle</property>
+		<factor>5000</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-2.74953</y-m>
+			<z-m>1.78685</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+	<animation>
+		<type>spin</type>
+		<object-name>right_prop</object-name>
+		<property>controls/engines/engine/throttle</property>
+		<factor>5000</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>2.66148</y-m>
+			<z-m>1.78729</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+<!--== doors ==-->
+	
+
+	
+
+	<animation>
+		<type>translate</type>
+		<object-name>cabin_door</object-name>
+		<property>sim/model/Y12/doors/door[0]/position-adj</property>
+		<factor>0.9</factor>
+		<axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		</axis>
+	</animation>
+
+</PropertyList>

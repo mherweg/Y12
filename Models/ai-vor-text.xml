@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!-- Bluebird Explorer Hovercraft  version 8.6 for FlightGear PLIB -->
+
+<PropertyList>
+<!-- instrument panel 1-Center must be declared separate to be top layer and rotate -->
+ <panel> 
+	<path>Aircraft/bluebird/Panels/ai-vor-callsign.xml</path>
+	<bottom-left>
+		<x-m>-8.188</x-m>
+		<y-m>-0.090</y-m>
+		<z-m>1.121</z-m>
+	</bottom-left>
+	<bottom-right>
+		<x-m>-8.188</x-m>
+		<y-m>-0.025</y-m>
+		<z-m>1.121</z-m>
+	</bottom-right>
+	<top-left>
+		<x-m>-8.197</x-m>
+		<y-m>-0.090</y-m>
+		<z-m>1.145</z-m>
+	</top-left>
+ </panel>
+
+ <panel> 
+	<path>Aircraft/bluebird/Panels/ai-vor-callsign2.xml</path>
+	<bottom-left>
+		<x-m>-8.188</x-m>
+		<y-m>-0.090</y-m>
+		<z-m>1.121</z-m>
+	</bottom-left>
+	<bottom-right>
+		<x-m>-8.188</x-m>
+		<y-m>-0.025</y-m>
+		<z-m>1.121</z-m>
+	</bottom-right>
+	<top-left>
+		<x-m>-8.197</x-m>
+		<y-m>-0.090</y-m>
+		<z-m>1.145</z-m>
+	</top-left>
+ </panel>
+</PropertyList>

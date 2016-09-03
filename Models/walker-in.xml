@@ -1,0 +1,897 @@
+<?xml version="1.0"?>
+<!--== walker animation v1.2 for FlightGear version 1.9 with OSG   ==-->
+<!--== Y12 Explorer Hovercraft  version 9.1 ==-->
+
+<PropertyList>
+	<path>waldo.ac</path>
+	<texture-path>Textures</texture-path>
+	<offsets>
+		<z-m>0.0</z-m>
+	</offsets>
+
+	<animation>
+		<type>translate</type>
+		<property>sim/model/Y12/crew/walker/x-offset-m</property>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<property>sim/model/Y12/crew/walker/y-offset-m</property>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<property>sim/model/Y12/crew/walker/z-offset-m</property>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+	</animation>
+
+<!-- limbs center coordinates, in order of appearence -->
+	<limbs>
+		<chest-x>-0.015</chest-x>
+		<chest-y>0.0</chest-y>
+		<chest-z>0.212</chest-z>
+		<head-x>0.019</head-x>
+		<head-y>0.0</head-y>
+		<head-z>0.586</head-z>
+		<shoulder-x>0.014</shoulder-x>
+		<shoulder-y-l>-0.18</shoulder-y-l>
+		<shoulder-y-r>0.18</shoulder-y-r>
+		<shoulder-z>0.49</shoulder-z>
+		<elbow-x>0.01</elbow-x>
+		<elbow-y-l>-0.44</elbow-y-l>
+		<elbow-y-r>0.44</elbow-y-r>
+		<elbow-z>0.508</elbow-z>
+		<hand-x>0.003</hand-x>
+		<hand-y-l>-0.681</hand-y-l>
+		<hand-y-r>0.681</hand-y-r>
+		<hand-z>0.505</hand-z>
+		<leg-x>-0.021</leg-x>
+		<leg-y-l>-0.1</leg-y-l>
+		<leg-y-r>0.1</leg-y-r>
+		<leg-z>0.035</leg-z>
+		<knee-x>-0.03</knee-x>
+		<knee-y-r>0.113</knee-y-r>
+		<knee-y-l>-0.113</knee-y-l>
+		<knee-z>-0.405</knee-z>
+		<foot-x>0.023</foot-x>
+		<foot-y-r>-0.119</foot-y-r>
+		<foot-y-r>0.119</foot-y-r>
+		<foot-z>-0.854</foot-z>
+	</limbs>
+
+<!-- hip -->
+	<animation>
+		<type>rotate</type>
+		<object-name>hip</object-name>
+		<property>sim/model/walker[1]/limb[0]/y-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m>0.01</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.1</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>hip</object-name>
+		<property>sim/model/Y12/crew/walker/head-offset-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m>0.01</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.1</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<property>sim/model/walker[1]/limb[0]/z-m</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m>0.01</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.1</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+	</animation>
+
+<!-- chest -->
+	<animation>
+		<type>rotate</type>
+		<object-name>chest</object-name>
+		<offset-deg>0</offset-deg>
+		<property>sim/model/walker[1]/limb[1]/y-deg</property>
+		<center>
+			<x-m alias="../../../limbs/chest-x"/>
+			<y-m alias="../../../limbs/chest-y"/>
+			<z-m alias="../../../limbs/chest-z"/>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>chest</object-name>
+		<offset-deg>0</offset-deg>
+		<property>sim/model/walker[1]/limb[1]/z-deg</property>
+		<center>
+			<x-m alias="../../../limbs/chest-x"/>
+			<y-m alias="../../../limbs/chest-y"/>
+			<z-m alias="../../../limbs/chest-z"/>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>-1.0</z>
+		</axis>
+	</animation>
+
+<!-- head -->
+	<animation>
+		<type>rotate</type>
+		<object-name>head</object-name>
+		<offset-deg>0</offset-deg>
+		<property>sim/model/walker[1]/limb[2]/y-deg</property>
+		<center>
+			<x-m alias="../../../limbs/head-x"/>
+			<y-m alias="../../../limbs/head-y"/>
+			<z-m alias="../../../limbs/head-z"/>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>head</object-name>
+		<offset-deg>0</offset-deg>
+		<property>sim/model/walker[1]/limb[2]/z-deg</property>
+		<center>
+			<x-m alias="../../../limbs/head-x"/>
+			<y-m alias="../../../limbs/head-y"/>
+			<z-m alias="../../../limbs/head-z"/>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>-1.0</z>
+		</axis>
+	</animation>
+
+<!-- right arm -->
+	<animation>
+		<type>rotate</type>
+		<object-name>arm1.R</object-name>
+		<property>sim/model/walker[1]/limb[3]/x-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m alias="../../../limbs/shoulder-x"/>
+			<y-m alias="../../../limbs/shoulder-y-r"/>
+			<z-m alias="../../../limbs/shoulder-z"/>
+		</center>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>arm1.R</object-name>
+		<property>sim/model/walker[1]/limb[3]/y-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m alias="../../../limbs/shoulder-x"/>
+			<y-m alias="../../../limbs/shoulder-y-r"/>
+			<z-m alias="../../../limbs/shoulder-z"/>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>arm1.R</object-name>
+		<property>sim/model/walker[1]/limb[3]/z-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m alias="../../../limbs/shoulder-x"/>
+			<y-m alias="../../../limbs/shoulder-y-r"/>
+			<z-m alias="../../../limbs/shoulder-z"/>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>-1.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>arm2.R</object-name>
+		<property>sim/model/walker[1]/limb[4]/y-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m alias="../../../limbs/elbow-x"/>
+			<y-m alias="../../../limbs/elbow-y-r"/>
+			<z-m alias="../../../limbs/elbow-z"/>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>arm2.R</object-name>
+		<property>sim/model/walker[1]/limb[4]/z-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m alias="../../../limbs/elbow-x"/>
+			<y-m alias="../../../limbs/elbow-y-r"/>
+			<z-m alias="../../../limbs/elbow-z"/>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>hand.R</object-name>
+		<property>sim/model/walker[1]/limb[5]/x-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m alias="../../../limbs/hand-x"/>
+			<y-m alias="../../../limbs/hand-y-r"/>
+			<z-m alias="../../../limbs/hand-z"/>
+		</center>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>hand.R</object-name>
+		<property>sim/model/walker[1]/limb[5]/y-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m alias="../../../limbs/hand-x"/>
+			<y-m alias="../../../limbs/hand-y-r"/>
+			<z-m alias="../../../limbs/hand-z"/>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+<!-- left arm -->
+	<animation>
+		<type>rotate</type>
+		<object-name>arm1.L</object-name>
+		<property>sim/model/walker[1]/limb[6]/x-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m alias="../../../limbs/shoulder-x"/>
+			<y-m alias="../../../limbs/shoulder-y-l"/>
+			<z-m alias="../../../limbs/shoulder-z"/>
+		</center>
+		<axis>
+			<x>-1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>arm1.L</object-name>
+		<property>sim/model/walker[1]/limb[6]/y-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m alias="../../../limbs/shoulder-x"/>
+			<y-m alias="../../../limbs/shoulder-y-l"/>
+			<z-m alias="../../../limbs/shoulder-z"/>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>-1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>arm1.L</object-name>
+		<property>sim/model/walker[1]/limb[6]/z-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m alias="../../../limbs/shoulder-x"/>
+			<y-m alias="../../../limbs/shoulder-y-l"/>
+			<z-m alias="../../../limbs/shoulder-z"/>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>arm2.L</object-name>
+		<property>sim/model/walker[1]/limb[7]/y-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m alias="../../../limbs/elbow-x"/>
+			<y-m alias="../../../limbs/elbow-y-l"/>
+			<z-m alias="../../../limbs/elbow-z"/>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>-1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>arm2.L</object-name>
+		<property>sim/model/walker[1]/limb[7]/z-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m alias="../../../limbs/elbow-x"/>
+			<y-m alias="../../../limbs/elbow-y-l"/>
+			<z-m alias="../../../limbs/elbow-z"/>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>-1.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>hand.L</object-name>
+		<property>sim/model/walker[1]/limb[8]/x-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m alias="../../../limbs/hand-x"/>
+			<y-m alias="../../../limbs/hand-y-l"/>
+			<z-m alias="../../../limbs/hand-z"/>
+		</center>
+		<axis>
+			<x>-1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>hand.L</object-name>
+		<property>sim/model/walker[1]/limb[8]/y-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m alias="../../../limbs/hand-x"/>
+			<y-m alias="../../../limbs/hand-y-l"/>
+			<z-m alias="../../../limbs/hand-z"/>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>-1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+<!--right leg -->
+	<animation>
+		<type>rotate</type>
+		<object-name>leg1.R</object-name>
+		<property>sim/model/walker[1]/limb[9]/x-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m alias="../../../limbs/leg-x"/>
+			<y-m alias="../../../limbs/leg-y-r"/>
+			<z-m alias="../../../limbs/leg-z"/>
+		</center>
+		<axis>
+			<x>-1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>leg1.R</object-name>
+		<property>sim/model/walker[1]/limb[9]/y-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m alias="../../../limbs/leg-x"/>
+			<y-m alias="../../../limbs/leg-y-r"/>
+			<z-m alias="../../../limbs/leg-z"/>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>-1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>leg1.R</object-name>
+		<property>sim/model/walker[1]/limb[9]/z-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m alias="../../../limbs/leg-x"/>
+			<y-m alias="../../../limbs/leg-y-r"/>
+			<z-m alias="../../../limbs/leg-z"/>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>-1.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>leg2.R</object-name>
+		<property>sim/model/walker[1]/limb[10]/y-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m alias="../../../limbs/knee-x"/>
+			<y-m alias="../../../limbs/knee-y-r"/>
+			<z-m alias="../../../limbs/knee-z"/>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>-1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>foot.R</object-name>
+		<property>sim/model/walker[1]/limb[11]/y-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m alias="../../../limbs/foot-x"/>
+			<y-m alias="../../../limbs/foot-y-r"/>
+			<z-m alias="../../../limbs/foot-z"/>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+<!-- left leg -->
+	<animation>
+		<type>rotate</type>
+		<object-name>leg1.L</object-name>
+		<property>sim/model/walker[1]/limb[12]/x-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m alias="../../../limbs/leg-x"/>
+			<y-m alias="../../../limbs/leg-y-l"/>
+			<z-m alias="../../../limbs/leg-z"/>
+		</center>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>leg1.L</object-name>
+		<property>sim/model/walker[1]/limb[12]/y-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m alias="../../../limbs/leg-x"/>
+			<y-m alias="../../../limbs/leg-y-l"/>
+			<z-m alias="../../../limbs/leg-z"/>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>-1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>leg1.L</object-name>
+		<property>sim/model/walker[1]/limb[12]/z-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m alias="../../../limbs/leg-x"/>
+			<y-m alias="../../../limbs/leg-y-l"/>
+			<z-m alias="../../../limbs/leg-z"/>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>-1.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>leg2.L</object-name>
+		<property>sim/model/walker[1]/limb[13]/y-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m alias="../../../limbs/knee-x"/>
+			<y-m alias="../../../limbs/knee-y-l"/>
+			<z-m alias="../../../limbs/knee-z"/>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>-1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>foot.L</object-name>
+		<property>sim/model/walker[1]/limb[14]/y-deg</property>
+		<offset-deg>0</offset-deg>
+		<center>
+			<x-m alias="../../../limbs/foot-x"/>
+			<y-m alias="../../../limbs/foot-y-l"/>
+			<z-m alias="../../../limbs/foot-z"/>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+<!-- interior lighting lit -->
+ <animation>
+	<type>material</type>
+	<object-name>hip_1</object-name>
+	<property-base>sim/model/Y12/lighting</property-base>
+	<emission>
+		<red-prop>waldo/emission/red</red-prop>
+		<green-prop>waldo/emission/gb</green-prop>
+		<blue-prop>waldo/emission/gb</blue-prop>
+		<factor>0.75</factor>
+	</emission>
+	<specular>
+		<factor-prop>interior-specular</factor-prop>
+		<red>1</red>
+		<green>1</green>
+		<blue>1</blue>
+	</specular>
+	<ambient>
+		<red-prop>waldo/emission/red</red-prop>
+		<green-prop>waldo/emission/gb</green-prop>
+		<blue-prop>waldo/emission/gb</blue-prop>
+		<factor>0.4</factor>
+		<offset>0.6</offset>
+	</ambient>
+	<diffuse>
+		<factor-prop>interior-specular</factor-prop>
+		<red>0.35</red>
+		<green>0.35</green>
+		<blue>0.35</blue>
+		<offset>0.05</offset>
+	</diffuse>
+ </animation>
+
+ <animation>
+	<type>material</type>
+	<object-name>chest_0</object-name>
+	<property-base>sim/model/Y12/lighting</property-base>
+	<emission>
+		<red-prop>waldo/emission/red</red-prop>
+		<green-prop>waldo/emission/gb</green-prop>
+		<blue-prop>waldo/emission/gb</blue-prop>
+		<factor>0.75</factor>
+	</emission>
+	<specular>
+		<factor-prop>interior-specular</factor-prop>
+		<red>1</red>
+		<green>1</green>
+		<blue>1</blue>
+	</specular>
+	<ambient>
+		<red-prop>waldo/emission/red</red-prop>
+		<green-prop>waldo/emission/gb</green-prop>
+		<blue-prop>waldo/emission/gb</blue-prop>
+		<factor>0.4</factor>
+		<offset>0.6</offset>
+	</ambient>
+	<diffuse>
+		<factor-prop>interior-specular</factor-prop>
+		<red>0.35</red>
+		<green>0.35</green>
+		<blue>0.35</blue>
+		<offset>0.05</offset>
+	</diffuse>
+</animation>
+
+ <animation>
+	<type>material</type>
+	<object-name>collar</object-name>
+	<property-base>sim/model/Y12/lighting</property-base>
+	<emission>
+		<red-prop>waldo/emission/red</red-prop>
+		<green-prop>waldo/emission/gb</green-prop>
+		<blue-prop>waldo/emission/gb</blue-prop>
+		<factor>0.75</factor>
+	</emission>
+	<specular>
+		<factor-prop>interior-specular</factor-prop>
+		<red>1</red>
+		<green>1</green>
+		<blue>1</blue>
+	</specular>
+	<ambient>
+		<red-prop>waldo/emission/red</red-prop>
+		<green-prop>waldo/emission/gb</green-prop>
+		<blue-prop>waldo/emission/gb</blue-prop>
+		<factor>0.4</factor>
+		<offset>0.6</offset>
+	</ambient>
+	<diffuse>
+		<factor-prop>interior-specular</factor-prop>
+		<red>0.35</red>
+		<green>0.35</green>
+		<blue>0.35</blue>
+		<offset>0.05</offset>
+	</diffuse>
+</animation>
+
+ <animation>
+	<type>material</type>
+	<object-name>hair</object-name>
+	<property-base>sim/model/Y12/lighting</property-base>
+	<emission>
+		<red-prop>waldo/emission/red</red-prop>
+		<green-prop>waldo/emission/gb</green-prop>
+		<blue-prop>waldo/emission/gb</blue-prop>
+		<factor>0.75</factor>
+	</emission>
+	<specular>
+		<factor-prop>interior-specular</factor-prop>
+		<red>1</red>
+		<green>1</green>
+		<blue>1</blue>
+	</specular>
+	<ambient>
+		<red-prop>waldo/emission/red</red-prop>
+		<green-prop>waldo/emission/gb</green-prop>
+		<blue-prop>waldo/emission/gb</blue-prop>
+		<factor>0.4</factor>
+		<offset>0.6</offset>
+	</ambient>
+	<diffuse>
+		<factor-prop>interior-specular</factor-prop>
+		<red>0.35</red>
+		<green>0.35</green>
+		<blue>0.35</blue>
+		<offset>0.05</offset>
+	</diffuse>
+</animation>
+
+ <animation>
+	<type>material</type>
+	<object-name>head_0</object-name>
+	<property-base>sim/model/Y12/lighting</property-base>
+	<emission>
+		<red-prop>waldo/emission/red</red-prop>
+		<green-prop>waldo/emission/gb</green-prop>
+		<blue-prop>waldo/emission/gb</blue-prop>
+		<factor>0.75</factor>
+	</emission>
+	<specular>
+		<factor-prop>interior-specular</factor-prop>
+		<red>1</red>
+		<green>1</green>
+		<blue>1</blue>
+	</specular>
+	<ambient>
+		<red-prop>waldo/emission/red</red-prop>
+		<green-prop>waldo/emission/gb</green-prop>
+		<blue-prop>waldo/emission/gb</blue-prop>
+		<factor>0.4</factor>
+		<offset>0.6</offset>
+	</ambient>
+	<diffuse>
+		<factor-prop>interior-specular</factor-prop>
+		<red>0.35</red>
+		<green>0.35</green>
+		<blue>0.35</blue>
+		<offset>0.05</offset>
+	</diffuse>
+</animation>
+
+ <animation>
+	<type>material</type>
+	<object-name>arm1.L</object-name>
+	<property-base>sim/model/Y12/lighting</property-base>
+	<emission>
+		<red-prop>waldo/emission/red</red-prop>
+		<green-prop>waldo/emission/gb</green-prop>
+		<blue-prop>waldo/emission/gb</blue-prop>
+		<factor>0.75</factor>
+	</emission>
+	<specular>
+		<factor-prop>interior-specular</factor-prop>
+		<red>1</red>
+		<green>1</green>
+		<blue>1</blue>
+	</specular>
+	<ambient>
+		<red-prop>waldo/emission/red</red-prop>
+		<green-prop>waldo/emission/gb</green-prop>
+		<blue-prop>waldo/emission/gb</blue-prop>
+		<factor>0.4</factor>
+		<offset>0.6</offset>
+	</ambient>
+	<diffuse>
+		<factor-prop>interior-specular</factor-prop>
+		<red>0.35</red>
+		<green>0.35</green>
+		<blue>0.35</blue>
+		<offset>0.05</offset>
+	</diffuse>
+</animation>
+
+ <animation>
+	<type>material</type>
+	<object-name>arm1.R</object-name>
+	<property-base>sim/model/Y12/lighting</property-base>
+	<emission>
+		<red-prop>waldo/emission/red</red-prop>
+		<green-prop>waldo/emission/gb</green-prop>
+		<blue-prop>waldo/emission/gb</blue-prop>
+		<factor>0.75</factor>
+	</emission>
+	<specular>
+		<factor-prop>interior-specular</factor-prop>
+		<red>1</red>
+		<green>1</green>
+		<blue>1</blue>
+	</specular>
+	<ambient>
+		<red-prop>waldo/emission/red</red-prop>
+		<green-prop>waldo/emission/gb</green-prop>
+		<blue-prop>waldo/emission/gb</blue-prop>
+		<factor>0.4</factor>
+		<offset>0.6</offset>
+	</ambient>
+	<diffuse>
+		<factor-prop>interior-specular</factor-prop>
+		<red>0.35</red>
+		<green>0.35</green>
+		<blue>0.35</blue>
+		<offset>0.05</offset>
+	</diffuse>
+ </animation>
+
+ <animation>
+	<type>material</type>
+	<object-name>leg1.L</object-name>
+	<property-base>sim/model/Y12/lighting</property-base>
+	<emission>
+		<red-prop>waldo/emission/red</red-prop>
+		<green-prop>waldo/emission/gb</green-prop>
+		<blue-prop>waldo/emission/gb</blue-prop>
+		<factor>0.75</factor>
+	</emission>
+	<specular>
+		<factor-prop>interior-specular</factor-prop>
+		<red>1</red>
+		<green>1</green>
+		<blue>1</blue>
+	</specular>
+	<ambient>
+		<red-prop>waldo/emission/red</red-prop>
+		<green-prop>waldo/emission/gb</green-prop>
+		<blue-prop>waldo/emission/gb</blue-prop>
+		<factor>0.4</factor>
+		<offset>0.6</offset>
+	</ambient>
+	<diffuse>
+		<factor-prop>interior-specular</factor-prop>
+		<red>0.35</red>
+		<green>0.35</green>
+		<blue>0.35</blue>
+		<offset>0.05</offset>
+	</diffuse>
+ </animation>
+
+ <animation>
+	<type>material</type>
+	<object-name>leg1.R</object-name>
+	<property-base>sim/model/Y12/lighting</property-base>
+	<emission>
+		<red-prop>waldo/emission/red</red-prop>
+		<green-prop>waldo/emission/gb</green-prop>
+		<blue-prop>waldo/emission/gb</blue-prop>
+		<factor>0.75</factor>
+	</emission>
+	<specular>
+		<factor-prop>interior-specular</factor-prop>
+		<red>1</red>
+		<green>1</green>
+		<blue>1</blue>
+	</specular>
+	<ambient>
+		<red-prop>waldo/emission/red</red-prop>
+		<green-prop>waldo/emission/gb</green-prop>
+		<blue-prop>waldo/emission/gb</blue-prop>
+		<factor>0.4</factor>
+		<offset>0.6</offset>
+	</ambient>
+	<diffuse>
+		<factor-prop>interior-specular</factor-prop>
+		<red>0.35</red>
+		<green>0.35</green>
+		<blue>0.35</blue>
+		<offset>0.05</offset>
+	</diffuse>
+ </animation>
+</PropertyList>

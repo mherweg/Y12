@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+
+<PropertyList include="Y12-base.xml">
+ <sim>
+	<description>Harbin Y-12 based on Bluebird Explorer Hovercraft</description>
+	<aircraft-version>0.1</aircraft-version>
+	<author>Martin Herweg and others</author>
+	<model>
+		<path>Aircraft/Y12/Models/Y12-osg.xml</path>
+	</model>
+    <startup>
+		<splash-texture>Aircraft/Y12/Y12-splash.png</splash-texture>
+	</startup>
+	<help>
+		<key n="20">
+			<name>W</name>
+			<desc>Run Forward outside</desc>
+		</key>
+		<key n="21">
+			<name>o</name>
+			<desc>Jump Outside/inside toggle</desc>
+		</key>
+		<key n="22">
+			<name>j</name>
+			<desc>Jumper/Jetison/open parachute, pull ripcord</desc>
+		</key>
+		<key n="23">
+			<name>k</name>
+			<desc>toggle smoke or contrails</desc>
+		</key>
+		<key n="25">
+			<name>L</name>
+			<desc>Load next Livery</desc>
+		</key>
+		<key n="26">
+			<name>l</name>
+			<desc>Livery Selection Dialog</desc>
+		</key>
+		<key n="27">
+			<name>Ctrl-Y</name>
+			<desc>Exterior Material Dialogs</desc>
+		</key>
+		<key n="28">
+			<name>Ctrl-U</name>
+			<desc>Interior Material Dialogs</desc>
+		</key>
+	</help>
+
+	<menubar>
+		<default>
+			<menu n="10">
+				<label>Harbin Y-12</label>
+				<enabled type="bool">true</enabled>
+				<item>
+					<label>Systems                   [=]</label>
+					<binding>
+						<command>nasal</command>
+						<script>Y12.showDialog1()</script>
+					</binding>
+				</item>
+				<item>
+					<label>Preferences Configuration</label>
+					<binding>
+						<command>nasal</command>
+						<script>Y12.showDialog2()</script>
+					</binding>
+				</item>
+				<item>
+					<label>Select Livery               [l]</label>
+					<binding>
+						<command>nasal</command>
+						<script>aircraft.livery.dialog.toggle()</script>
+					</binding>
+				</item>
+				<item>
+					<label>Toggle venting/contrails   [k]</label>
+					<binding>
+						<command>nasal</command>
+						<script>Y12.toggle_venting_both()</script>
+					</binding>
+				</item>
+				<item>
+					<label>Walker animation dialog  [=]</label>
+					<binding>
+						<command>nasal</command>
+						<script>walker.sequence.showDialog()</script>
+					</binding>
+				</item>
+				<item>
+					<label>pilot animation dialog</label>
+					<binding>
+						<command>nasal</command>
+						<script>pilot.sequence.showDialog()</script>
+					</binding>
+				</item>
+			</menu>
+		</default>
+	</menubar>
+
+	<submodels>
+		<serviceable>true</serviceable>
+		<path>Aircraft/Y12/Models/submodels.xml</path>
+	</submodels>
+ </sim>
+
+ <input>
+	<keyboard>
+		<key n="76">
+			<name>L</name>
+			<desc>Select next variant</desc>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>aircraft.livery.next()</script>
+			</binding>
+		</key>
+		<key n="108">
+			<name>l</name>
+			<desc>Show livery dialog</desc>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>aircraft.livery.dialog.toggle()</script>
+			</binding>
+		</key>
+		<key n="21">
+			<name>Ctrl-U</name>
+			<desc>Show interior material dialogs</desc>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+					material.showDialog("sim/model/livery/material/interior-flooring/", nil, 10);
+					material.showDialog("sim/model/livery/material/interior-upper/", nil, 250);
+					material.showDialog("sim/model/livery/material/interior-lower/", nil, 480);
+					material.showDialog("sim/model/livery/material/interior-door-panels/", nil, 700);
+				</script>
+			</binding>
+		</key>
+		<key n="25">
+			<name>Ctrl-Y</name>
+			<desc>Show exterior material dialogs</desc>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>Y12.showLiveryDialog1()</script>
+			</binding>
+		</key>
+		<key n="111">
+			<name>o</name>
+			<desc>Toggle walker outside/inside</desc>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>sim/walker/key-triggers/outside-toggle</property>
+			</binding>
+		</key>
+		<key n="106"> 
+			<name>j</name>
+			<desc>open parachute</desc>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>walk.open_chute()</script>
+			</binding>
+		</key>
+		<key n="107">
+			<name>k</name>
+			<desc>Toggle venting/contrails</desc>
+			<binding>
+				<command>nasal</command>
+				<script>Y12.toggle_venting_both()</script>
+			</binding>
+		</key>
+	</keyboard>
+ </input>
+
+ <nasal>
+	<Y12>
+		<file>Aircraft/Y12/Nasal/Y12.nas</file>
+		<file>Aircraft/Y12/Nasal/saveconfig.nas</file>
+	</Y12>
+	
+	<walk>
+		<file>Aircraft/Y12/Nasal/walk.nas</file>
+		<script>main_loop();</script>
+	</walk>
+	<walker>
+		<file>Aircraft/Y12/Nasal/walker-animate.nas</file>
+	</walker>
+ </nasal>
+</PropertyList>
