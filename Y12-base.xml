@@ -49,7 +49,7 @@
 				<pilot>
 					<chair-back type="int">0</chair-back>
 					
-					<visible type="bool">false</visible>
+					<visible type="bool">true</visible>
 				</pilot>
 				<walker>
 					<visible type="bool">true</visible>
@@ -74,7 +74,7 @@
 			</hover>
 	
 	<position>
-				<altitude-agl-ft type="double">0</altitude-agl-ft>
+				<!-- <altitude-agl-ft type="double">0</altitude-agl-ft>  -->
 				<crash-wow type="bool">false</crash-wow>
 				<hover-rise type="float">0</hover-rise>		<!-- yoke movement -->
 				<landing-wow type="bool">false</landing-wow>
@@ -429,7 +429,7 @@
 		<config>
 			<x-offset-m>0.0</x-offset-m>
 			<y-offset-m>1.47</y-offset-m>
-			<z-offset-m>-1.35</z-offset-m>
+			<z-offset-m>-6.00</z-offset-m>
 			<pitch-offset-deg>-2.0</pitch-offset-deg>
 			<roll-offset-deg>0</roll-offset-deg>
 			<limits>

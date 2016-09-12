@@ -17,6 +17,21 @@
 
 <!-- clickable button block for osg only -->
 	
+<animation>
+		<type>pick</type>
+		<object-name>cabin_door</object-name>
+		<action>
+			<name>cabin_door</name>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>	
+				<command>nasal</command>
+				<script>Y12.toggle_door()</script>
+			</binding>
+		</action>
+	</animation>
+
+
 
 <!-- particle system effects -->
 	<animation>
