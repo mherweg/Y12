@@ -43,6 +43,20 @@
 			<z>0</z>
 		</axis>
 	</animation>
+	
+<!--== landing gear ==-->	
+	
+<animation>
+		<type>select</type>
+		<object-name>wheels</object-name>
+		<object-name>landing_gear</object-name>
+		<condition>
+			<or>
+				<property>gear/gear[0]/position-norm</property>
+				<property>gear/gear[1]/position-norm</property>
+			</or>
+		</condition>
+	</animation>
 
 <!--== doors ==-->
 	
