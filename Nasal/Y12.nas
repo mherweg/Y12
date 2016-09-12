@@ -92,67 +92,6 @@ var pitch_control = props.globals.getNode("controls/flight/elevator", 1);
 var destruction_threshold = 100;
 
 # === define nasal non-local variables at startup ===================
-# interior lighting and emissions -----------------------------------
-	# surface# color/location 
-	#    0     Overhead lights
-	#  1       Blue        Rug/Floor		Livery
-	#  2       Light blue  Door panels		Livery
-	#  3       Tan         Upper walls		Livery
-	#  4       Grey45      Lower walls and covers	Livery
-	#  5       Grey36      Panel surfaces
-	#  6       Tan         Chairs
-	#  7       Brown       Rear hatch non-skid flooring
-	#  8       Grey80      Light fixture housing
-	#  9       Grey60      Buttons
-	#  0/A     Grey14      Door seals
-	#  B       WHITE       Door markers/lights
-	#  C       YELLOW      Hatch Safety marker Lights
-var livery_cabin_surface = [	# A=ambient from livery, only updates upon livery change
-				# _add= factor to calculate ambient from livery accounting for alert_level
-				# E=calculated emissions
-	{ AR: 0.02, AG: 0.02, AB: 0.02, R_add: 0.00 , G_add: 0.00 , B_add: 0.00 , ER: 0, EG: 0, EB: 0, pname: "interiorA-door-seals", type:"", in_livery:0},
-	{ AR: 0   , AG: 0   , AB: 1   , R_add: 0.50 , G_add: 0.00 , B_add:-0.25 , ER: 0, EG: 0, EB: 0, pname: "interior1-flooring", type:"", in_livery:1},
-	{ AR: 0.50, AG: 0.70, AB: 0.90, R_add: 0.00 , G_add: 0.00 , B_add: 0.00 , ER: 0, EG: 0, EB: 0, pname: "interior2-door-panels", type:"", in_livery:1},
-	{ AR: 0.70, AG: 0.69, AB: 0.55, R_add: 0.00 , G_add: 0.00 , B_add: 0.00 , ER: 0, EG: 0, EB: 0, pname: "interior3-upper-walls", type:"", in_livery:1},
-	{ AR: 0.60, AG: 0.60, AB: 0.60, R_add: 0.00 , G_add: 0.00 , B_add: 0.00 , ER: 0, EG: 0, EB: 0, pname: "interior4-lower-walls", type:"", in_livery:1},
-	{ AR: 0.36, AG: 0.37, AB: 0.32, R_add: 0.18 , G_add:-0.0925, B_add:-0.08 , ER: 0, EG: 0, EB: 0, pname: "interior5-console", type:"", in_livery:0},
-	{ AR: 0.70, AG: 0.69, AB: 0.59, R_add: 0.30 , G_add:-0.1725, B_add:-0.1475, ER: 0, EG: 0, EB: 0, pname: "interior6-chairs", type:"", in_livery:0},
-	{ AR: 0.25, AG: 0.25, AB: 0.17, R_add: 0.125, G_add:-0.06  , B_add:-0.0425, ER: 0, EG: 0, EB: 0, pname: "door5/hatch7-flooring-side", type:"", in_livery:0},
-	{ AR: 0.80, AG: 0.80, AB: 0.80, R_add: 0.20 , G_add:-0.20  , B_add:-0.20  , ER: 0, EG: 0, EB: 0, pname: "interior8-light-frame", type:"GB", in_livery:0},
-	{ AR: 0.60, AG: 0.60, AB: 0.60, R_add: 0.20 , G_add:-0.20  , B_add:-0.20  , ER: 0, EG: 0, EB: 0, pname: "interior9-buttons", type:"GB", in_livery:0}
-	];
-var livery_cabin_count = size(livery_cabin_surface);
-var button_G1 = 0;	# remember current button colors to limit spending time in setprop.
-var button_G2 = 0;	# binary operators: 1 = red, 2 = green, 4 = blue, 8 = dim
-var button_G3 = 0;
-var button_G4 = 0;
-var button_LT1 = 0;
-var button_LT2 = 0;
-var button_LT6 = 0;	# includes LT3 thru 6
-var button_LT7 = 0;
-var button_LT8 = 0;
-var button_LT9 = 0;
-var button_RT1 = 0;
-var button_RT2 = 0;
-var button_RT3 = 0;
-var button_RT4 = 0;
-var button_RT5 = 0;
-var button_RT6 = 0;
-var button_RT7 = 0;
-var button_RT8 = 0;
-var button_RT9 = 0;
-var button_lit = 0;	# brightness. global to remember between updates
-var interior_lighting_base_R = 0;   # base for calculating individual colors inside
-var interior_lighting_base_GB = 0;  # Red, and GreenBlue
-var unlit_lighting_base = 0;     # also includes alert level and sun angle
-var panel_lighting_R = 0;
-var panel_lighting_GB = 0;
-var panel_ambient_R = 0;
-var panel_ambient_GB = 0;
-var panel_specular = 0;
-var alert_switch = 0;
-var int_switch = 1;
-# specular reminder: 1 = full reflection, 0 = no reflection from sun
 
 # ------ components ------
 var nacelleL_attached = 1;
@@ -264,7 +203,7 @@ var alert_level = 0;
 # ------- walker ---------  h = view heading
 # Y12 cabin locations
 var cockpit_locations = [
-	{ x: -1.35, y:  0   , z_floor_m: -0.495, h: 0 , p: -2, fov: 55, can_walk: 0, z_eye_offset_m: 1.375 },
+	{ x: -7.00, y:  -0.5   , z_floor_m: -0.3, h: 0 , p: -2, fov: 55, can_walk: 0, z_eye_offset_m: 1.675 },
 	{ x: -2.6 , y:  0   , z_floor_m: -0.495, h: 90 , p:  0, fov: 55, can_walk: 1, z_eye_offset_m: 1.425 },
 	{ x: -3.94, y:  0, z_floor_m: -0.495, h: -90 , p:  0, fov: 55, can_walk: 0, z_eye_offset_m: 1.575 },
 	{ x: -4.93, y:  0, z_floor_m: -0.495, h: 180 , p:  0, fov: 55, can_walk: 0, z_eye_offset_m: 1.675 },

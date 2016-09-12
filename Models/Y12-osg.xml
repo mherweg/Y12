@@ -545,9 +545,9 @@
 		<path>Aircraft/Y12/Models/pilot.xml</path>
 		<nopreview/>
 		<offsets> 
-			<x-m>-7.4</x-m>
-			<y-m>0.0</y-m>
-			<z-m>0.83</z-m>
+			<x-m>-7.0</x-m>
+			<y-m>0.5</y-m>
+			<z-m>0.70</z-m>
 		</offsets>
 	</model>
 
