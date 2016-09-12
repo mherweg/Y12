@@ -12,7 +12,7 @@ var hatch_specs = {
 	rear_hatch_loc: 4,
 	out_locations: func (loc) {
 			if (loc == 0) {		# exit but not by hatch
-				var new_coord = xy2LatLonZ(-1.0,0.0,-0.2,0);	# neutral coordinates outside front port wingtip
+				var new_coord = xy2LatLonZ(-1.0,1.5,-1.0,0);	#  coordinates outside cabin door
 			} elsif (loc == 1) {
 				var new_coord = xy2LatLonZ(-1.0,0.0,-0.2,0);
 			} elsif (loc == 2) {
@@ -213,35 +213,35 @@ var main_loop = func {
 				var posy = getprop("sim/walker/latitude-deg");
 				var posx = getprop("sim/walker/longitude-deg");
 
-				# the following section is aircraft specific for locations of entry hatches and doors
-				if (getprop("sim/model/Y12/doors/door[0]/position-norm") > 0.73) {
-					var door0_ll = xy2LatLonZ(-2.6,-3.42,0,0);
-					var a0 = sin((door0_ll[0] - posy) * 0.5);
-					var b0 = sin((door0_ll[1] - posx) * 0.5);
-					# doesn't actually check z-axis, mis-alignments in rare orientations
-					var d0 = 2.0 * ERAD * asin(math.sqrt(a0 * a0 + cos(door0_ll[0]) * cos(posy) * b0 * b0));
-					if (d0 < 1.2) {
-						get_in(1);
-					}
-				}
-				if (getprop("sim/model/Y12/doors/door[1]/position-norm") > 0.73) {
-					var door1_ll = xy2LatLonZ(-2.6,3.42,0,0);
-					var a1 = sin((door1_ll[0] - posy) * 0.5);
-					var b1 = sin((door1_ll[1] - posx) * 0.5);
-					var d1 = 2.0 * ERAD * asin(math.sqrt(a1 * a1 + cos(door1_ll[0]) * cos(posy) * b1 * b1));
-					if (d1 < 1.2) {
-						get_in(2);
-					}
-				}
-				if (getprop("sim/model/Y12/doors/door[5]/position-norm") > 0.78) {
-					var door5_ll = xy2LatLonZ(9.0,0,0,0);
-					var a5 = sin((door5_ll[0] - posy) * 0.5);
-					var b5 = sin((door5_ll[1] - posx) * 0.5);
-					var d5 = 2.0 * ERAD * asin(math.sqrt(a5 * a5 + cos(door5_ll[0]) * cos(posy) * b5 * b5));
-					if (d5 < 1.9) {
-						get_in(4);
-					}
-				}
+				## the following section is aircraft specific for locations of entry hatches and doors
+				#if (getprop("sim/model/Y12/doors/door[0]/position-norm") > 0.73) {
+					#var door0_ll = xy2LatLonZ(-2.6,-3.42,0,0);
+					#var a0 = sin((door0_ll[0] - posy) * 0.5);
+					#var b0 = sin((door0_ll[1] - posx) * 0.5);
+					## doesn't actually check z-axis, mis-alignments in rare orientations
+					#var d0 = 2.0 * ERAD * asin(math.sqrt(a0 * a0 + cos(door0_ll[0]) * cos(posy) * b0 * b0));
+					#if (d0 < 1.2) {
+						#get_in(1);
+					#}
+				#}
+				#if (getprop("sim/model/Y12/doors/door[1]/position-norm") > 0.73) {
+					#var door1_ll = xy2LatLonZ(-2.6,3.42,0,0);
+					#var a1 = sin((door1_ll[0] - posy) * 0.5);
+					#var b1 = sin((door1_ll[1] - posx) * 0.5);
+					#var d1 = 2.0 * ERAD * asin(math.sqrt(a1 * a1 + cos(door1_ll[0]) * cos(posy) * b1 * b1));
+					#if (d1 < 1.2) {
+						#get_in(2);
+					#}
+				#}
+				#if (getprop("sim/model/Y12/doors/door[5]/position-norm") > 0.78) {
+					#var door5_ll = xy2LatLonZ(9.0,0,0,0);
+					#var a5 = sin((door5_ll[0] - posy) * 0.5);
+					#var b5 = sin((door5_ll[1] - posx) * 0.5);
+					#var d5 = 2.0 * ERAD * asin(math.sqrt(a5 * a5 + cos(door5_ll[0]) * cos(posy) * b5 * b5));
+					#if (d5 < 1.9) {
+						#get_in(4);
+					#}
+				#}
 				# end aircraft specific
 
 			}
@@ -676,7 +676,7 @@ var get_in = func (loc) {
 		if (loc >= 1) {
 			if (c_pos == 9) {
 				var new_walker_x = (loc == 1 ? -2.55 : (loc == 2 ? -2.55 : 8.4));
-				var new_walker_y = (loc == 1 ? -2.8 : (loc == 2 ? 2.8 : 0));
+				var new_walker_y = (loc == 1 ? -2.8 : (loc == 2 ? -0.2 : 0));
 				c_pos = (loc == 2 ? 1 : loc);
 				Y12.cockpit_locations[c_pos].x = new_walker_x;
 				Y12.cockpit_locations[c_pos].y = new_walker_y;
@@ -685,11 +685,11 @@ var get_in = func (loc) {
 			} else {
 				if (loc == 1) {
 					var new_walker_x = -2.55;
-					var new_walker_y = -4.25;
+					var new_walker_y = -1.25;
 					var new_walker_z = Y12.hatch_z_offset_m(1, -4.25) + 0.495;
 				} elsif (loc == 2) {
 					var new_walker_x = -2.55;
-					var new_walker_y = 4.25;
+					var new_walker_y = 1.25;
 					var new_walker_z = Y12.hatch_z_offset_m(2, 4.25) + 0.495;
 				} else {
 					var new_walker_x = getprop("sim/model/Y12/crew/walker/x-offset-m");

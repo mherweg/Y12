@@ -203,8 +203,8 @@ var alert_level = 0;
 # ------- walker ---------  h = view heading
 # Y12 cabin locations
 var cockpit_locations = [
-	{ x: -7.00, y:  -0.5   , z_floor_m: -0.3, h: 0 , p: -2, fov: 55, can_walk: 0, z_eye_offset_m: 1.675 },
-	{ x: -2.6 , y:  0   , z_floor_m: -0.495, h: 90 , p:  0, fov: 55, can_walk: 1, z_eye_offset_m: 1.425 },
+	{ x: -7.00, y:  -0.5, z_floor_m: -0.3, h: 0 , p: -2, fov: 55, can_walk: 0, z_eye_offset_m: 1.675 },
+	{ x: -2.6 , y:  0, z_floor_m: -0.495, h: 90 , p:  0, fov: 55, can_walk: 1, z_eye_offset_m: 1.425 },
 	{ x: -3.94, y:  0, z_floor_m: -0.495, h: -90 , p:  0, fov: 55, can_walk: 0, z_eye_offset_m: 1.575 },
 	{ x: -4.93, y:  0, z_floor_m: -0.495, h: 180 , p:  0, fov: 55, can_walk: 0, z_eye_offset_m: 1.675 },
 	{ x:  8.4 , y:  1.60, z_floor_m: 0.495, h:135, p:  0, fov: 55, can_walk: 1, z_eye_offset_m: 1.625 } ];	# left doorway
@@ -608,7 +608,7 @@ setlistener("sim/model/Y12/systems/wave2-request", func(n) { wave2_request = n.g
 
 # interior ----------------------------------------------------------
 
-setlistener("sim/model/Y12/lighting/interior-switch", func(n) { int_switch = n.getValue() },, 0);
+#setlistener("sim/model/Y12/lighting/interior-switch", func(n) { int_switch = n.getValue() },, 0);
 
 var isodd = func(n) { int(n / 2) * 2 != int(n) };
 
