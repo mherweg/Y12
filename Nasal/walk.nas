@@ -7,7 +7,7 @@ var hatch_specs = {
 	z_floor_ft: func (loc) {
 			#  z-axis offset for walker exit from aircraft origin
 			#  generally floor z-axis converted to ft.
-			return (Y12.hatch_z_offset_m(loc, 11) + 0.495) * globals.M2FT;
+			return (Y12.hatch_z_offset_m(loc, 11) + 0.1) * globals.M2FT;
 	},
 	rear_hatch_loc: 4,
 	out_locations: func (loc) {

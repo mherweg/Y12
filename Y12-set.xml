@@ -28,22 +28,7 @@
 			<name>k</name>
 			<desc>toggle smoke or contrails</desc>
 		</key>
-		<key n="25">
-			<name>L</name>
-			<desc>Load next Livery</desc>
-		</key>
-		<key n="26">
-			<name>l</name>
-			<desc>Livery Selection Dialog</desc>
-		</key>
-		<key n="27">
-			<name>Ctrl-Y</name>
-			<desc>Exterior Material Dialogs</desc>
-		</key>
-		<key n="28">
-			<name>Ctrl-U</name>
-			<desc>Interior Material Dialogs</desc>
-		</key>
+		
 	</help>
 
 	<menubar>

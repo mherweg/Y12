@@ -12,19 +12,7 @@
 			<pitch-deg>0.0</pitch-deg>
 			<heading-deg>0.0</heading-deg>
 		</offsets>
-		<condition>
-			<and>
-				<property>ai/submodels/nacelle-RR-venting</property>
-				<less-than>
-					<property>position/altitude-ft</property>
-					<value>50000</value>
-				</less-than>
-				<equals>
-					<property>sim/model/bluebird/damage/major-counter</property>
-					<value>0</value>
-				</equals>
-			</and>
-		</condition>
+	
 		<texture>smoke.png</texture>
 		<emissive>false</emissive>
 		<lighting>false</lighting>

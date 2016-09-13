@@ -1305,8 +1305,8 @@
  </instrumentation>
 
  <logging>
-	<walker-position type="bool">false</walker-position>
-	<walker-debug type="bool">false</walker-debug>
+	<walker-position type="bool">true</walker-position>
+	<walker-debug type="bool">true</walker-debug>
  </logging>
 
  <orientation>

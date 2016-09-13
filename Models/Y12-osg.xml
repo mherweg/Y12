@@ -35,6 +35,59 @@
 
 <!-- particle system effects -->
 	
+ <animation>
+		<type>rotate</type>
+		<object-name>trails-LR</object-name>
+		<object-name>trails-RR</object-name>
+		<property>orientation/groundslope-factored-pitch</property>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>trails-LR</object-name>
+		<object-name>trails-RR</object-name>
+		<property>orientation/groundslope-factored-roll</property>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+	<model>
+		<name>trails-LR</name>
+		<path>Aircraft/bluebird/Models/Effects/trails-LR.xml</path>
+		<offsets>
+				
+			<x-m>-4.4</x-m>
+			<y-m>-2.74953</y-m>
+			<z-m>1.78685</z-m>
+			
+			<roll-deg>0.0</roll-deg>
+			<pitch-deg>-90.0</pitch-deg>
+			<heading-deg>0.0</heading-deg>
+		</offsets>
+	</model>
+
+	
+	<model>
+		<name>trails-RR</name>
+		<path>Aircraft/bluebird/Models/Effects/trails-RR.xml</path>
+		<offsets>
+				<x-m>-4.4</x-m>
+			<y-m>2.66148</y-m>
+			<z-m>1.78729</z-m>
+			<roll-deg>0.0</roll-deg>
+			<pitch-deg>-90.0</pitch-deg>
+			<heading-deg>0.0</heading-deg>
+		</offsets>
+	</model>
 
 
 <!-- flares, fire, and sparks -->
@@ -71,9 +124,10 @@
 		<path>Aircraft/Y12/Models/passenger.xml</path>
 		<nopreview/>
 		<offsets> 
-			<x-m>-7.0</x-m>
-			<y-m>-0.4</y-m>
-			<z-m>0.70</z-m>
+			<heading-deg>90</heading-deg>
+			<x-m>-5.0</x-m>
+			<y-m>0.7</y-m>
+			<z-m>0.40</z-m>
 		</offsets>
 </model>
 <!--

@@ -179,8 +179,8 @@ var skid = [
 	{ nose_in_deg: 0, altitude_change_ft: 0, depth_ft: 0, impact_factor: 0 },
 	{ nose_in_deg: 0, altitude_change_ft: 0, depth_ft: 0, impact_factor: 0 }];
 # ------ submodel control -----
-var nacelle_L_venting = 0;
-var nacelle_R_venting = 0;
+var nacelle_L_venting = -1;
+var nacelle_R_venting = -1;
 var venting_direction = -2;     # start disabled. -1=backward, 1=forward, 0=both
 var shutdown_venting = 0;
 # --- ground detection ---
@@ -2414,10 +2414,10 @@ var walk_about_cabin = func(wa_distance, walk_offset) {
 		if (new_x_position <= -1.94) {	# divide search by half
 			if (new_x_position <= -8.0) {
 				new_x_position = -8.0;
-				if (new_y_position < -0.4) {
-					new_y_position = -0.4;
-				} elsif (new_y_position > 0.4) {
-					new_y_position = 0.4;
+				if (new_y_position < -0.3) {
+					new_y_position = -0.3;
+				} elsif (new_y_position > 0.3) {
+					new_y_position = 0.3;
 				}
 			} elsif (new_x_position > -8.0 and new_x_position < -5.76) {
 				var y_angle = (new_x_position + 8.0) / 2.24 * 0.92;
@@ -2718,17 +2718,11 @@ var set_landing_lights = func(sll_i) {
 
 var toggle_venting_both = func {
 	if (!nacelle_R_venting) {
-		if (nacelleL_attached) {
 			setprop("sim/model/Y12/systems/nacelle-L-venting", 1);
-		}
-		if (nacelleR_attached) {
 			setprop("sim/model/Y12/systems/nacelle-R-venting", 1);
-		}
-		if (nacelleL_attached or nacelleR_attached) {
-			popupTip2("Smoke venting ON");
-		} else {
-			popupTip2("Unable to comply. Too much damage.");
-		}
+		popupTip2("Smoke venting ON");
+		
+		
 	} else {
 		setprop("sim/model/Y12/systems/nacelle-L-venting", 0);
 		setprop("sim/model/Y12/systems/nacelle-R-venting", 0);
